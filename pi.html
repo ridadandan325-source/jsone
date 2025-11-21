@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Equation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .result {
+            background-color: #e8f5e9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+            font-size: 18px;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pi (π) Equation</h1>
+    <div id="result"></div>
+
+    <script>
+        // Using π constant variable
+        const PI = Math.PI;
+        
+        // Example: Calculate area of a circle using π
+        let radius = 5;
+        
+        // Equation: Area = π × r²
+        let area = PI * radius * radius;
+        
+        // Display result
+        document.getElementById("result").innerHTML = `
+            <div class="result">
+                <strong>Equation:</strong> Area of Circle = π × r²<br>
+                <strong>Radius (r):</strong> ${radius}<br>
+                <strong>π (Pi constant):</strong> ${PI.toFixed(6)}<br>
+                <strong>Calculation:</strong> ${PI.toFixed(4)} × ${radius}² = ${area.toFixed(4)}
+            </div>
+        `;
+    </script>
+</body>
+</html>
+

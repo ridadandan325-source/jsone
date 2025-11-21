@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Grading Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .result {
+            background-color: #e8f5e9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+            font-size: 18px;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Marks Grading Program</h1>
+    <div id="result"></div>
+
+    <script>
+        // Declare initial value for mark
+        let mark = 85; // You can change this value to test
+
+        let grade;
+        if (mark < 50) {
+            grade = "FAIL";
+        } else if (mark >= 50 && mark <= 59) {
+            grade = "D";
+        } else if (mark >= 60 && mark <= 69) {
+            grade = "C";
+        } else if (mark >= 70 && mark <= 79) {
+            grade = "B";
+        } else if (mark >= 80 && mark <= 89) {
+            grade = "A";
+        } else if (mark >= 90 && mark <= 100) {
+            grade = "A+";
+        } else {
+            grade = "Invalid mark";
+        }
+
+        // Display using document.write()
+        document.write(`<div class="result"><strong>Mark:</strong> ${mark}, <strong>Grade:</strong> ${grade}</div>`);
+
+        // Also display in the div
+        document.getElementById("result").innerHTML = `
+            <div class="result">
+                <strong>Mark:</strong> ${mark}<br>
+                <strong>Grade:</strong> ${grade}
+            </div>
+        `;
+    </script>
+</body>
+</html>
+

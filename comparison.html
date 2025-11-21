@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World / Goodbye</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .result {
+            background-color: #e8f5e9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+            font-size: 18px;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World / Goodbye</h1>
+    <div id="result"></div>
+
+    <script>
+        // Get x and y from prompt
+        let x = parseFloat(prompt("Enter value for x:"));
+        let y = parseFloat(prompt("Enter value for y:"));
+
+        let message;
+        if (x > y) {
+            message = "Hello World";
+        } else {
+            message = "Goodbye";
+        }
+
+        // Display in alert
+        alert(message);
+
+        // Display in console.log
+        console.log(`x = ${x}, y = ${y}`);
+        console.log(`Result: ${message}`);
+
+        // Display in HTML page
+        document.getElementById("result").innerHTML = `
+            <div class="result">
+                <strong>x:</strong> ${x}<br>
+                <strong>y:</strong> ${y}<br>
+                <strong>Result:</strong> ${message}
+            </div>
+        `;
+    </script>
+</body>
+</html>
+
